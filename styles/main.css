@@ -1,0 +1,87 @@
+body {
+  font-family: monospace, Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  /* background: radial-gradient(circle, rgba(255,130,247,1) 0%, rgba(254,255,207,1) 100%);  */
+  background: radial-gradient(
+    circle,
+    rgba(130, 144, 255, 1) 0%,
+    rgba(254, 255, 207, 1) 100%
+  );
+  text-align: center;
+}
+
+.container {
+  max-width: 650px;
+  margin: 50px auto;
+  padding: 20px;
+  background: white;
+  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+  /* display: flex; */
+  /* justify-content: center;; */
+}
+
+h1,
+h2 {
+  color: #333;
+  margin: 0;
+}
+
+h2 {
+    padding-top: 20px;
+}
+
+p {
+  color: #555;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #0073e6;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+.supporters {
+    display: flex;
+    justify-content: center; /* Aligns images in the center horizontally */
+    gap: 20px; /* Adds spacing between images */
+    align-items: center; /* Ensures images align properly */
+}
+
+.supporters img {
+    max-height: 100px; /* Adjust the height as needed */
+    width: auto; /* Keeps the aspect ratio */
+}
+
+.column-container {
+    margin-top: 20px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+
+.column {
+    text-align: left;
+    flex: 1; /* Makes them take equal space */
+    background-color: #f9f9f9;
+    max-width: 500px
+}
+
+
+.column h3 {
+    text-align: center;
+}
+
+li {
+    margin-bottom: 5px;
+}
+
+ul {
+  text-align: left;
+}
