@@ -47,7 +47,7 @@ p {
   font-weight: bold;
   text-align: center;
   transition: background-color 0.3s ease;
-  margin-bottom: 20px;
+  /* margin-bottom: 20px; */
 }
 .cta-button:hover {
   background-color: rgba(254, 255, 207, 1);
@@ -80,6 +80,10 @@ p {
     flex: 1; /* Makes them take equal space */
     background-color: #f9f9f9;
     max-width: 500px
+}
+
+.column p {
+    padding: 0 20px;
 }
 
 
