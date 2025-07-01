@@ -127,3 +127,8 @@ table td:first-child {
   width: 100px; /* adjust as needed */
   white-space: nowrap; /* prevents line breaks */
 }
+
+span.small {
+  font-size: 0.8em;
+  color: #585858;
+}
