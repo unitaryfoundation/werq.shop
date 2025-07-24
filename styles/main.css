@@ -132,3 +132,12 @@ span.small {
   font-size: 0.8em;
   color: #585858;
 }
+
+.container img {
+  max-width: 50%;
+}
+
+.talk-abstract p {
+  text-align: left;
+  /* font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif */
+}
