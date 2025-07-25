@@ -5,31 +5,45 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="/styles/glitch.css">
   <link rel="stylesheet" href="/styles/main.css">
-  <title>Drift-resilient mitigation techniques for dynamic circuits and QEM-QEC integration</title>
+  <title>WERQSHOP talk: Drift-resilient mitigation techniques for dynamic circuits and QEM-QEC integration</title>
 </head>
 <body>
   <div class="container">
-    <h1>WERQSHOP Talk</h1>
-    <h2>Drift-resilient mitigation techniques for dynamic circuits and QEM-QEC integration</h2>
-    <h3>Speaker: 
+    <div class="hero-container glitch-small">
+      <div class="environment"></div>
+      <h1 class="hero glitch-small" data-text="WERQSHOP Talk"><span>WERQSHOP Talk</span></h1>
+    </div>
+
+    <h2 class="talk-title">Drift-resilient mitigation techniques for dynamic circuits and QEM-QEC integration</h2>
+
+    <div class="speaker-condensed">
+      <div class="speaker-text">
+        <strong>
+          
+            <a href="https://openscholar.huji.ac.il/raamuzdin">Raam Uzdin</a>
+          
+        </strong>
+        
+          <span class="affiliation"> ⊗ Hebrew University of Jerusalem</span>
+        
+        
+          <span class="slides-link"> ⊗ [<a href="/talks/slides/raam-uzdin.pdf">Slides</a>]</span>
+        
+        
+      </div>
       
-        <a href="https://openscholar.huji.ac.il/raamuzdin">Raam Uzdin</a> (Hebrew University of Jerusalem)
-      
-    </h3>
-    <div class="speaker-info">
-      
-        <img src="https://en-science.huji.ac.il/sites/default/files/styles/190_250/public/science/files/uzdin.jpg?m=1717910501&amp;itok=XnDnJOo3" alt="Raam Uzdin" class="Raam Uzdin headshot" />
-      
+        <img src="https://en-science.huji.ac.il/sites/default/files/styles/190_250/public/science/files/uzdin.jpg?m=1717910501&amp;itok=XnDnJOo3" alt="Raam Uzdin headshot" class="headshot-small" />
       
     </div>
-    
+
+
     <div class="talk-abstract">
       <h3>Abstract</h3>
       <p>This talk reviews several mitigation techniques we have developed that are compatible with dynamic circuits. Dynamic circuits encapsulate both error correction codes and efficient circuits for entangled state preparation, gate teleportation, semi-classical Fourier transform, barren plateau free VQE, and more. The gate error is mitigated using the recently introduced Layered KIK protocol which extends the Adaptive KIK protocol to dynamic circuits. We will also present a mid-circuit measurement mitigation protocol based on the parity of consecutive measurements. This idea is also extended to terminating measurements and preparation error. As such, it offers an efficient alternative to gate set alternative. Finally, we present pseudo-twirling for mitigating coherent error in non-Clifford gates. Contrary to previous work on this topic, we provide a theoretical analysis that describes the nature of the residual incoherent error and the effect of the protocol on the native incoherent errors. Crucially, all the above-described methods are resilient to time drifts in the noise parameters and require no noise characterization. Supporting experimental results will be presented. This work paves the way to integration of error mitigation and error correction where error correction will do the heavy lifting of addressing local error, and error mitigation will mitigate errors that challenge error correction codes such as correlated errors and leakage errors.</p>
 
     </div>
-    <p><a href="/talks/slides/raam-uzdin.pdf">Slides</a></p>
-    <p><a href="/">Back to home</a></p>
+
+    <p><a href="/talks">View all talks</a></p>
   </div>
 </body>
 </html>

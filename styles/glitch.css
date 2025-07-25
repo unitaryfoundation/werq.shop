@@ -493,3 +493,8 @@ section {
   background-size: cover;
   background-color: yellow;
 }
+
+.glitch-small {
+  font-size: clamp(20px, 5vw, 50px);
+  padding: 20px 0;
+}
