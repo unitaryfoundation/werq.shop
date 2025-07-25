@@ -3,3 +3,5 @@ _site
 
 admin/*.md
 admin/*.csv
+
+.DS_Store
