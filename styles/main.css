@@ -1,0 +1,143 @@
+body {
+  font-family: monospace, Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  /* background: radial-gradient(circle, rgba(255,130,247,1) 0%, rgba(254,255,207,1) 100%);  */
+  background: radial-gradient(
+    circle,
+    rgba(130, 144, 255, 1) 0%,
+    rgba(254, 255, 207, 1) 100%
+  );
+  text-align: center;
+}
+
+.container {
+  max-width: 650px;
+  margin: 50px auto;
+  padding: 20px;
+  background: white;
+  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+  /* display: flex; */
+  /* justify-content: center;; */
+}
+
+h1,
+h2 {
+  color: #333;
+  margin: 0;
+}
+
+h2 {
+    padding-top: 20px;
+}
+
+p {
+  color: #555;
+}
+
+
+
+.cta-button {
+  display: inline-block;
+  padding: 0.75em 2em;
+  background-color: rgba(130, 144, 255, 1);
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  text-align: center;
+  transition: background-color 0.3s ease;
+  /* margin-bottom: 20px; */
+}
+.cta-button:hover {
+  background-color: rgba(254, 255, 207, 1);
+  color: rgba(130, 144, 255, 1);
+}
+
+.supporters {
+    display: flex;
+    justify-content: center; /* Aligns images in the center horizontally */
+    gap: 20px; /* Adds spacing between images */
+    align-items: center; /* Ensures images align properly */
+}
+
+.supporters img {
+    max-height: 100px; /* Adjust the height as needed */
+    width: auto; /* Keeps the aspect ratio */
+}
+
+.column-container {
+    margin-top: 20px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+
+.column {
+    text-align: left;
+    flex: 1; /* Makes them take equal space */
+    background-color: #f9f9f9;
+    max-width: 500px
+}
+
+.column p {
+    padding: 0 20px;
+}
+
+
+.column h3 {
+    text-align: center;
+}
+
+li {
+    margin-bottom: 5px;
+}
+
+ul {
+  text-align: left;
+}
+
+tbody tr:nth-child(odd) {
+  background-color: #d5daff;
+}
+
+.popover {
+  position: absolute;
+  z-index: 9999;
+  max-width: 400px;
+  background: #f2f2f2;
+  color: #1a1a1a;
+  padding: 20px;
+  border: 3px solid #fdff70;
+  border-radius: 8px;
+  box-shadow: -10px 10px 30px rgb(63, 63, 63);
+  display: none;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.popover-trigger {
+  cursor: pointer;
+  text-decoration: underline dashed;
+}
+
+table th:first-child,
+table td:first-child {
+  width: 100px; /* adjust as needed */
+  white-space: nowrap; /* prevents line breaks */
+}
+
+span.small {
+  font-size: 0.8em;
+  color: #585858;
+}
+
+.container img {
+  max-width: 50%;
+}
+
+.talk-abstract p {
+  text-align: left;
+  /* font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif */
+}
