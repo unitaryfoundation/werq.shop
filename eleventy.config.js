@@ -8,4 +8,10 @@ module.exports = function(eleventyConfig) {
       .getFilteredByGlob("./talks/*.md")
       .filter(item => !item.inputPath.endsWith("/index.md"));
   });
+
+  return {
+    dir: {
+      includes: "layouts"
+    }
+  };
 };
