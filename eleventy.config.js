@@ -3,6 +3,7 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("image");
   eleventyConfig.addPassthroughCopy("talks/slides");
   eleventyConfig.addPassthroughCopy("static");
+  eleventyConfig.addPassthroughCopy("CNAME");
 
   eleventyConfig.addCollection("talks", (collectionApi) => {
     return collectionApi
