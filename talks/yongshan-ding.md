@@ -1,9 +1,10 @@
 ---
 title: "Error Mitigation for Logical Qubits"
 speaker: "Yongshan Ding"
-website: ""
-bio: ""
-headshot: ""
+affiliation: "Yale University"
+website: "https://www.yongshanding.com/"
+bio: "I am an Assistant Professor of Computer Science and of Applied Physics at Yale University. I am a member of the Yale Quantum Institute (YQI) and affiliated with the Computer Systems Lab (CSL). I lead the Quantum Systems Lab (QSL) at Yale and direct Yale's Quantum Science and Engineering Certificate program. Our research focuses on advancing the capability and performance of next-generation quantum information systems. We work on a broad set of problems related to algorithms and architectures of quantum computers."
+headshot: "https://www.yongshanding.com/images/yongshan_ding_2021.JPG"
 slides: ""
 ---
 

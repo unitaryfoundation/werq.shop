@@ -13,14 +13,21 @@
     <h2>{{ title }}</h2>
     <h3>Speaker: 
       {% if website %}
-        <a href="{{ website }}">{{ speaker }}</a>
+        <a href="{{ website }}">{{ speaker }}</a> {% if affiliation %}({{ affiliation }}){% endif %}
       {% else %}
-        {{ speaker }}
+        {{ speaker }} {% if affiliation %}({{ affiliation }}){% endif %}
       {% endif %}
     </h3>
-    {% if affiliation %}<p>{{ affiliation }}</p>{% endif %}
-    {% if headshot %}<img src="{{ headshot }}" alt="{{ speaker }}" />{% endif %}
-    {% if bio %}<p>{{ bio }}</p>{% endif %}
+    <div class="speaker-info">
+      {% if headshot %}
+        <img src="{{ headshot }}" alt="{{ speaker }}" class="{{ speaker }} headshot" />
+      {% endif %}
+      {% if bio %}
+        <p class="speaker-bio">{{ bio }}</p>
+      {% endif %}
+    </div>
+    {# {% if headshot %}<img src="{{ headshot }}" alt="{{ speaker }}" />{% endif %}
+    {% if bio %}<p>{{ bio }}</p>{% endif %} #}
     <div class="talk-abstract">
       <h3>Abstract</h3>
       {{ content | safe }}

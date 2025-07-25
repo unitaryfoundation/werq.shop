@@ -1,7 +1,8 @@
 ---
 title: "Behind the scenes of error mitigation: from theory to performant code"
 speaker: "Sam Ferracin"
-website: ""
+affiliation: IBM
+website: "https://scholar.google.com/citations?user=X5tIwgUAAAAJ"
 bio: ""
 headshot: ""
 slides: ""

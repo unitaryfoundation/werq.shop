@@ -1,8 +1,9 @@
 ---
 title: "Samples and Symmetries in Quantum Error Mitigation"
 speaker: "Thomas O'Leary"
-website: ""
-bio: ""
+affiliation: "University of Oxford"
+website: "https://t1491625.github.io/website/"
+bio: " I'm a PhD student at the University of Oxford taking part in the Computational Discovery DTC. I'm funded (by EPSRC & IBM) to do research into near term quantum algorithms. Particular areas of focus are quantum simulation and controlling quantum errors. I worked at Los Alamos National Lab during Summer 22 as part of their Quantum Computing Summer School. I have an MSci in Physics and Computer Science from Durham University where my thesis (which can be read on the 'projects page') was supervised by Viv Kendon and Nick Chancellor. In between graduating and starting the PhD I worked as a software engineer at Elsevier in London."
 headshot: ""
 slides: ""
 ---

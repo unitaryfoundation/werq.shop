@@ -1,6 +1,7 @@
 ---
 title: "Quantum error correction beyond the surface code"
 speaker: "Pablo Bonilla"
+affiliation: Harvard University
 website: ""
 bio: ""
 headshot: ""

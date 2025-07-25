@@ -1,8 +1,9 @@
 ---
 title: The Mitiq Open Source Ecosystem
 speaker: Nathan Shammah
+affiliation: Unitary Foundation
 website: "https://nathanshammah.com/"
-bio: ""
+bio: "I am the Chief Technology Officer of Unitary Foundation, a non-profit organization that performs in-house research in quantum tech and supports the open-source software ecosystem. At Unitary Foundation, I lead the technical staff (Unitary Labs), which performs research in quantum computing developing open-source software."
 headshot: "https://nathanshammah.com/wp-content/uploads/2019/10/nathan-shammah.jpg?w=1024"
 slides: "nathan-shammah.pdf"
 ---

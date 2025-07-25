@@ -1,6 +1,7 @@
 ---
 title: "Quantum error detection: Theory and experiment"
 speaker: "Ethan Egger"
+affiliation: Michigan State University
 website: ""
 bio: ""
 headshot: ""

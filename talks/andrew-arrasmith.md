@@ -1,6 +1,7 @@
 ---
 title: "Interfacing Open Source Tools with Industry Backends"
 speaker: "Andrew Arrasmith"
+affiliation: "IonQ"
 website: ""
 bio: ""
 headshot: ""

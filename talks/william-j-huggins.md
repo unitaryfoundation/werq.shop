@@ -1,7 +1,8 @@
 ---
 title: "FLASQ: a cost model for early fault-tolerance"
 speaker: "William J. Huggins"
-website: ""
+affiliation: Google
+website: "https://scholar.google.com/citations?user=6__AJMEAAAAJ"
 bio: ""
 headshot: ""
 slides: ""

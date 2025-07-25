@@ -1,7 +1,8 @@
 ---
 title: "Adaptive Error Mitigation"
 speaker: "Yvette De Sereville"
-website: ""
+affiliation: IonQ
+website: "https://github.com/yvetteds"
 bio: ""
 headshot: ""
 slides: ""

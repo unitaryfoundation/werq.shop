@@ -1,9 +1,10 @@
 ---
 title: "Bridging Quantum Error Correction and Mitigation"
 speaker: "Zhenyu Cai"
-website: ""
-bio: ""
-headshot: ""
+affiliation: University of Oxford
+website: "https://zhenyucai.com/"
+bio: "I am an EPSRC Research Fellow (group leader, principal investigator) in Department of Engineering Science, Oxford. My research interests centre around the error suppression, especially in the near-term and early fault-tolerant regime. Prior to this, I was the Junior Research Fellow in Physics at St John’s College, Oxford."
+headshot: "https://zhenyucai.com/author/zhenyu-cai/avatar_hu9e83d68d9ba2c8644e33ca350fb60792_194508_270x270_fill_q90_lanczos_center.jpg"
 slides: ""
 ---
 
