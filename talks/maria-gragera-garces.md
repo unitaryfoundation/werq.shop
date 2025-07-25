@@ -3,7 +3,7 @@ title: "Scaling Quantum Error Mitigation in the Age of Distributed Quantum Compu
 speaker: "María Gragera Garcés"
 affiliation: University of Edinburgh
 website: "https://grageragarces.github.io/"
-bio: ""
+bio: " I'm a PhD student at The University of Edinburgh's School of Informatics, where I research distributed quantum computing. I am co-supervised by Chris Heunen and Mahesh Marina, partially funded by the Oxford Quantum Technology Hub DTP and VeriQloud, and working within the Quantum Software Lab."
 headshot: "https://grageragarces.github.io/images/selfie.jpg"
 slides: "maria-gragera-garces.pdf"
 ---

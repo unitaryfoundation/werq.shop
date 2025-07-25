@@ -3,22 +3,36 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  {# <link rel="stylesheet" href="/styles/glitch.css"> #}
+  <link rel="stylesheet" href="/styles/glitch.css">
   <link rel="stylesheet" href="/styles/main.css">
   <title>{{ title }}</title>
 </head>
 <body>
   <div class="container">
-    <h1>{{ title }}</h1>
-    <ul>
-      {% for talk in collections.talks %}
-        <li>
-          <a href="{{ talk.url | url }}">{{ talk.data.title }}</a>
-          - {{ talk.data.speaker }}
-          {% if talk.data.affiliation %} ({{ talk.data.affiliation }}){% endif %}
-        </li>
-      {% endfor %}
-    </ul>
+    <div class="hero-container glitch-small">
+      <div class="environment"></div>
+      <h1 class="hero glitch-small" data-text="WERQSHOP Talk"><span>WERQSHOP Talks</span></h1>
+    </div>
+
+    <div class="table-wrapper">
+      <table class="talks-table">
+        <thead>
+          <tr>
+            <th>Title</th>
+            <th>Speaker</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for talk in collections.talks %}
+            <tr>
+              <td><a href="{{ talk.url | url }}">{{ talk.data.title }}</a></td>
+              <td>{{ talk.data.speaker }}<br><span class="small">{% if talk.data.affiliation %}{{ talk.data.affiliation }}{% else %}&mdash;{% endif %}</span></td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+
     {{ content | safe }}
     <p><a href="/">Back to home</a></p>
   </div>

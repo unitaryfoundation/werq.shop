@@ -103,9 +103,9 @@
 
                         <li>
                             <b>Eli Chertkov</b> (Quantinuum)<br>
-                            <span class="popover-trigger" data-popover="The utility of near-term quantum computers for simulating realistic quantum systems hinges on the stability of digital quantum matter---realized when discrete quantum gates approximate continuous time evolution---and whether it can be maintained at system sizes and time scales inaccessible to classical simulations. Here, we use Quantinuum's H2 quantum computer to simulate digitized dynamics of the quantum Ising model and observe the emergence of Floquet prethermalization on timescales where accurate simulations using current classical methods are extremely challenging (if feasible at all). In addition to confirming the stability of dynamics subject to achievable digitization errors, we show direct evidence of the resultant local equilibration by computing diffusion constants associated with an emergent hydrodynamic description of the dynamics. Our results were enabled by continued advances in two-qubit gate quality (native partial entangler fidelities of 99.94(1)%) that allow us to access circuit volumes of over 2000 two-qubit gates. This work establishes digital quantum computers as powerful tools for studying continuous-time dynamics and demonstrates their potential to benchmark classical heuristics in a regime of scale and complexity where no known classical methods are both efficient and trustworthy.">
+                            <a href="/talks/eli-chertkov">
                                 Digital quantum magnetism at the frontier of classical simulations
-                            </span>
+                            </a>
                     </ul>
                 </td>
             </tr>
@@ -120,15 +120,15 @@
                     <ul>
                         <li>
                             <b>Zhenyu Cai</b> (Oxford)<br>
-                            <span class="popover-trigger" data-popover="Despite rapid advances in quantum hardware, achieving full fault-tolerant quantum computation through quantum error correction (QEC) remains a significant challenge. Meanwhile, quantum error mitigation (QEM), which recovers expectation values from noisy circuits using additional runs, has emerged as an essential tool in many experiments due to its low hardware requirements. Given their complementary strengths, effectively integrating QEC and QEM is crucial for maximising the computational reach of the early-fault-tolerant hardware that we will soon have. Previous approaches of combining QEC and QEM have largely focused on applying QEM directly onto logical qubits. Here I will present our recent work that goes beyond the current paradigm, some of which rely on deceptively simple concepts but can be impactful in many practical scenarios.">
+                            <a href="/talks/zhenyu-cai">
                                 Bridging Quantum Error Correction and Mitigation
-                            </span>
+                            </a>
                         </li>
                         <li>
                             <b>Raam Uzdin</b> (HUJI)<br>
-                            <span class="popover-trigger" data-popover="This talk reviews several mitigation techniques we have developed that are compatible with dynamic circuits. Dynamic circuits encapsulate both error correction codes and efficient circuits for entangled state preparation, gate teleportation, semi-classical Fourier transform, barren plateau free VQE, and more. The gate error is mitigated using the recently introduced Layered KIK protocol which extends the Adaptive KIK protocol to dynamic circuits. We will also present a mid-circuit measurement mitigation protocol based on the parity of consecutive measurements. This idea is also extended to terminating measurements and preparation error. As such, it offers an efficient alternative to gate set alternative. Finally, we present pseudo-twirling for mitigating coherent error in non-Clifford gates. Contrary to previous work on this topic, we provide a theoretical analysis that describes the nature of the residual incoherent error and the effect of the protocol on the native incoherent errors. Crucially, all the above-described methods are resilient to time drifts in the noise parameters and require no noise characterization. Supporting experimental results will be presented. This work paves the way to integration of error mitigation and error correction where error correction will do the heavy lifting of addressing local error, and error mitigation will mitigate errors that challenge error correction codes such as correlated errors and leakage errors.">
+                            <a href="/talks/raam-uzdin">
                                 Drift-resilient mitigation techniques for dynamic circuits and QEM-QEC integration
-                            </span>
+                            </a>
                         </li>
                     </ul>
                 </td>
@@ -144,27 +144,27 @@
                     <ul>
                         <li>
                             <b>Zhiyao Li</b> (U Washington)<br>
-                            <span class="popover-trigger" data-popover="I will present our workflow for simulating the adiabatic state preparation of the ground state of a scalar field theory on IBM’s quantum computers. This includes error mitigation techniques that are particularly useful for time evolution such as self-mitigating circuits and operator decoherence renormalization. I will also discuss quantum simulation strategies and limitations for systems using 100 qubits. (Our definition of “quantum simulation” refers to simulating quantum systems on quantum devices, as opposed to simulating quantum device behaviors on classical computers.) Additionally, I will introduce Sequency Hierarchy Truncation (SeqHT), a method designed to reduce quantum resource requirements for state preparation and time evolution. By applying SeqHT, we achieve a ∼30% reduction in circuit depth, leading to significantly improved fidelities in our quantum simulations. SeqHT provides a general organizational framework applicable to simulations of systems with hierarchical energy or length scales. It also shines light on optimizing resource allocation in the context of quantum error correction.">
+                            <a href="/talks/zhiyao-li">
                                 Simulating Adiabatic State Preparation on Quantum Computers
-                            </span>
+                            </a>
                         </li>
                         <li>
                             <b>Simone Cantori</b> (U Camerino)<br>
-                            <span class="popover-trigger" data-popover="We investigate the synergy between (simulated) noisy quantum computers and classical deep neural networks to address the challenge of quantum error mitigation. Our approach combines noisy quantum data with classical circuit descriptors to train scalable convolutional neural networks capable of predicting accurate expectation values of quantum circuits with more qubits than those used for training. Additionally, we explore the use of circuit knitting techniques to implement quantum circuits for the neural network training set, enhancing the performance of Variational Quantum Eigensolver algorithms.">
+                            <a href="/talks/simone-cantori">
                                 Deep learning for quantum error mitigation
-                            </span>
+                            </a>
                         </li>
                         <li>
                             <b>Ethan Egger</b> (Michigan State U)<br>
-                            <span class="popover-trigger" data-popover="Of the many techniques proposed for mitigating errors on quantum computers, error detection is one of the simplest protocols. While error detection has been used in several small-scale experiments, the overhead and scaling on real quantum computers is understudied. In this work we provide a clear exposition of error detection which unifies multiple formulations in literature, and we present results from error detection experiments on real and simulated noisy quantum computers. Our experimental results show that the accuracy of expectation values calculated via error detection can improve exponentially in the number of physical qubits, but reveals the important practical considerations that must be met in order to achieve this, including overhead from compilation, fault-tolerant gates, and sample complexity.">
+                            <a href="/talks/ethan-egger">
                                 Quantum error detection: Theory and experiment
-                            </span>
+                            </a>
                         </li>
                         <li>
                             <b>Yvette De Sereville</b> (IonQ)<br>
-                            <span class="popover-trigger" data-popover="We introduce an approach to error mitigation tailored to specific applications using targeted characterization measurements. Beyond matching the general error mitigation strategy to the application, we will discuss methods for tuning the parameters of the chosen error mitigation technique. We also show how running characterization circuits allows us to choose which of the set of possible error detection flags will result in the largest improvement in overall circuit fidelity.">
+                            <a href="/talks/yvette-de-sereville">
                                 Adaptive Error Mitigation
-                            </span>
+                            </a>
                         </li>
                     </ul>
                 </td>
@@ -180,15 +180,15 @@
                     <ul>
                         <li>
                             <b>Yongshan Ding</b> (Yale)<br>
-                            <span class="popover-trigger" data-popover="Quantum hardware devices continue to expand in scale and are increasingly capable of suppressing, detecting, and correcting errors. The next challenge is to develop the crucial systems architecture to perform various computational tasks on emerging hardware more robustly and efficiently. My talk will introduce several recent results from our group at Yale about utilizing quantum error mitigation for logical error-corrected and error-detected qubits. I will discuss how error mitigation can be used to enhance fault tolerance schemes, from logical qubit encoding to logical error learning.">
+                            <a href="/talks/yongshan-ding">
                                 Error Mitigation for Logical Qubits
-                            </span>
+                            </a>
                         </li>
                         <li>
                             <b>William J. Huggins</b> (Google)<br>
-                            <span class="popover-trigger" data-popover="Programming small fault-tolerant quantum computers will involve challenges and constraints that are very different from the ones we face when designing algorithms for today’s devices. This makes it difficult to design algorithms or determine when particular applications will be viable without a deep knowledge of the machinery of quantum error correction. We propose a heuristic cost model for a 2D surface code architecture based on an approximation we call the “FLuid Allocation of Surface code Qubits”. We argue that this cost model generates reasonable estimates for the runtime and error rate of a quantum algorithm without requiring that the user explicitly compile the circuit into native surface code operations. Using the FLASQ model, we analyze the cost of competing with state-of-the-art classical methods for simulating quantum dynamics.">
+                            <a href="/talks/william-j-huggins">
                                 FLASQ: a cost model for early fault-tolerance
-                            </span>
+                            </a>
                         </li>
                     </ul>
                 </td>
@@ -203,9 +203,9 @@
                 <td>OSS QEM</td>
                 <td>
                     <b>Nathan Shammah</b> (Unitary Foundation)<br>
-                    <span class="popover-trigger" data-popover="The Mitiq open source ecosystem is a community-driven toolkit for quantum error mitigation, developed by the Unitary Foundation to support resilient quantum computing across platforms. It implements techniques such as zero-noise extrapolation, probabilistic error cancellation, and virtual distillation, and integrates with major quantum software and hardware stacks. This talk highlights recent benchmarks, collaborative research, and design principles that make Mitiq a flexible and composable foundation for advancing both practical applications and fundamental studies of quantum error mitigation.">
+                    <a href="/talks/nathan-shammah">
                         Mitiq Open Source Ecosystem
-                    </span>
+                    </a>
                 </td>
             </tr>
             <tr>
@@ -228,28 +228,21 @@
                         <ul>
                             <li>
                                 <b>Thomas O'Leary</b> (Oxford)<br>
-                                <span class="popover-trigger" data-popover="Redundancy through quantum circuit symmetry lies at the heart of quantum error correction, enabling precise inference of circuit errors. For quantum devices capable of partial quantum error correction, this inference may be limited, enabling only a limited reduction in logical noise rates. Quantum error mitigation is a natural way to use an increased number of circuit samples to make up for this limited correction. In this work we explore the potential of using circuit symmetry for reducing the sampling cost of mitigation at the physical qubit level.">
+                                <a href="/talks/thomas-oleary">
                                     Samples and Symmetries in Quantum Error Mitigation
-                                </span>
+                                </a>
                             </li>
                             <li>
                                 <b>Jin Ming Koh</b> (Harvard)<br>
-                                <span class="popover-trigger" data-popover="Advances in quantum hardware and algorithms have made present-day devices increasingly useful in quantum simulation. In this talk, I review one of the first efforts in studying measurement-induced entanglement phase transitions on superconducting quantum processors [1], discussing in particular the error reduction and mitigation strategies employed in the experiment. I summarize also an array of work probing condensed-matter systems in one, two, and higher dimensions [2-4] and non-Hermitian phenomena [5] on superconducting processors, focusing likewise on important error mitigation and suppression techniques. Collectively, these techniques span readout error mitigation, symmetry verification, zero noise extrapolation, and randomized compiling tailored for different contexts. Time permitting, I mention also a recently developed readout error mitigation method for mid-circuit measurements on dynamic circuits [6].
-
-                                [1] Nat. Phys. 19, 1314–1319 (2023).
-                                [2] npj Quantum Inf. 8, 16 (2022).
-                                [3] Phys. Rev. Lett. 129, 140502 (2022).
-                                [4] Nat. Commun. 15, 5807 (2024).
-                                [5] arXiv:2503.14595.
-                                [6] arXiv:2406.07611.">
-                                Error mitigation in quantum dynamics and condensed-matter simulations
-                                </span>
+                                <a href="/talks/jin-ming-koh">
+                                    Error mitigation in quantum dynamics and condensed-matter simulations
+                                </a>
                             </li>
                             <li>
                                 <b>Matea Leahy</b> (Algorithmiq)<br>
-                                <span class="popover-trigger" data-popover="Until scalable fault-tolerant quantum computing becomes a reality, quantum algorithms will continue to depend heavily on noise mitigation techniques. In this talk, I will present our Tensor-Network-based Error Mitigation (TEM) algorithm, a post-processing approach designed to correct noise-induced errors in the estimation of physical observables. The method involves constructing a tensor network representation of the inverse of the global noise channel affecting the quantum processor's state, and subsequently applying this inverse map to informationally complete measurement data obtained from the noisy state. I will walk through the details of the algorithm and share recent results, including applications to 91-qubit circuits involving over 4,000 CNOT gates.">
-                                Scalable tensor-network based error mitigation
-                                </span>
+                                <a href="/talks/matea-leahy">
+                                    Scalable tensor-network based error mitigation
+                                </a>
                             </li>
                         </ul>
                     </td>
@@ -265,23 +258,21 @@
                         <ul>
                             <li>
                                 <b>Pablo Bonilla</b> (Harvard)<br>
-                                <span class="popover-trigger" data-popover="Quantum error correction is widely expected to play a crucial role in realizing large-scale quantum processors. Currently, the surface code is the leading quantum error-correcting code due to its high fault-tolerance thresholds and practical implementation requirements, which only necessitate nearest-neighbor interactions—a restriction suitable for many state-of-the-art platforms such as Google's and IBM's superconducting qubit systems. However, emerging quantum computing platforms, like reconfigurable neutral atom arrays, support arbitrary qubit connectivity. This flexibility prompts a fundamental question: can we outperform the surface code by exploiting non-local interactions? In this talk, we explore recent developments in high-rate quantum low-density parity-check (qLDPC) codes that leverage non-local connectivity. We demonstrate that these codes can offer more than an order-of-magnitude improvement in resource efficiency compared to the surface code, significantly reducing spatial overhead required for quantum memory and logical gate operations. Additionally, we will discuss practical strategies for implementing the inherent non-local interactions of qLDPC codes within neutral atom platforms, highlighting both their potential advantages and technical challenges. This presentation builds upon recent work [https://www.nature.com/articles/s41567-024-02479-z], contextualized for broad accessibility.">
+                                <a href="/talks/pablo-bonilla">
                                     Quantum error correction beyond the surface code
-                                </span>
+                                </a>
                             </li>
                             <li>
                                 <b>María Gragera Garcés</b> (U Edinburgh)<br>
-                                <span class="popover-trigger" data-popover="Quantum Error Mitigation (QEM) has shown promise on near-term devices, but its scalability in future architectures, particularly those that distribute computation across multiple quantum processing units (QPUs), remains underexplored. This talk outlines key challenges and considerations for extending QEM to distributed quantum computing (DQC), where circuit partitioning, inter-QPU communication, and synchronization introduce new sources of error and resource tradeoffs.
-                                We examine why QEM must adapt to these emerging execution models, focusing on overheads from communication-induced decoherence, redundant mitigation across device boundaries, and the complexity introduced by heterogeneous noise profiles. Common QEM techniques such as zero-noise extrapolation and probabilistic error cancellation are evaluated in the context of partitioned circuits, using synthetic circuit studies to characterize their scalability and limitations. The discussion also considers how compilation-time decisions affect mitigation feasibility and cost, and highlights the role of hybrid classical-quantum feedback and scheduling in real-world deployments.
-                                The aim of this talk is to raise awareness of the need for distribution-aware QEM frameworks and to foster collaboration across compiler, mitigation, and architecture communities.">
+                                <a href="/talks/maria-gragera-garces">
                                     Scaling Quantum Error Mitigation in the Age of Distributed Quantum Computation
-                                </span>
+                                </a>
                             </li>
                             <li>
                                 <b>Sam Ferracin</b> (IBM)<br>
-                                <span class="popover-trigger" data-popover="In recent years, great effort has been devoted to speeding up error mitigation, motivated by its inherent inefficiency and by the urgent need to make it faster and practical for real-world applications. While developing these advances “on paper” is rightly regarded as a difficult task, turning them into performant software is an equally critical (and often underestimated) challenge—one that can potentially introduce bottlenecks for users and undermine the gains achieved on papers. In this talk, I will discuss some of the main hurdles that developers encounter when they write software for error mitigation and integrate it into an existing software stack. I will explain how the software team at IBM has managed to overcome some of these issues in the last few years, and how we plan to keep improving the performance, reliability, and expressive power of our software stack in the near future.">
+                                <a href="/talks/sam-ferracin">
                                     Behind the scenes of error mitigation: from theory to performant code
-                                </span>
+                                </a>
                             </li>
                         </ul>
                     </td>
@@ -295,9 +286,9 @@
                     <td>Discussion</td>
                     <td>
                         <b>Andrew Arrasmith</b> (IonQ)<br>
-                        <span class="popover-trigger" data-popover="We propose to hold an open discussion of the challenges of balancing the general utility of open source error mitigation tools with the need for hardware specific details to achieve the best results. We intend to bring up questions about what information needs to (and can) be exposed by hardware providers as well as how open source toolsets can be enabled to utilize that information.">
-                        Interfacing Open Source Tools with Industry Backends
-                        </span>
+                        <a href="/talks/andrew-arrasmith">
+                            Interfacing Open Source Tools with Industry Backends
+                        </a>
                     </td>
                 </tr>
                 <tr>

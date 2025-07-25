@@ -5,35 +5,48 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="/styles/glitch.css">
   <link rel="stylesheet" href="/styles/main.css">
-  <title>{{ title }}</title>
+  <title>WERQSHOP talk: {{ title }}</title>
 </head>
 <body>
   <div class="container">
-    <h1>WERQSHOP Talk</h1>
-    <h2>{{ title }}</h2>
-    <h3>Speaker: 
-      {% if website %}
-        <a href="{{ website }}">{{ speaker }}</a> {% if affiliation %}({{ affiliation }}){% endif %}
-      {% else %}
-        {{ speaker }} {% if affiliation %}({{ affiliation }}){% endif %}
-      {% endif %}
-    </h3>
-    <div class="speaker-info">
+    <div class="hero-container glitch-small">
+      <div class="environment"></div>
+      <h1 class="hero glitch-small" data-text="WERQSHOP Talk"><span>WERQSHOP Talk</span></h1>
+    </div>
+
+    <h2 class="talk-title">{{ title }}</h2>
+
+    <div class="speaker-condensed">
+      <div class="speaker-text">
+        <strong>
+          {% if website %}
+            <a href="{{ website }}">{{ speaker }}</a>
+          {% else %}
+            {{ speaker }}
+          {% endif %}
+        </strong>
+        {% if affiliation %}
+          <span class="affiliation"> ⊗ {{ affiliation }}</span>
+        {% endif %}
+        {% if slides %}
+          <span class="slides-link"> ⊗ [<a href="/talks/slides/{{ slides }}">Slides</a>]</span>
+        {% endif %}
+        {% if bio %}
+          <p class="bio-condensed">{{ bio }}</p>
+        {% endif %}
+      </div>
       {% if headshot %}
-        <img src="{{ headshot }}" alt="{{ speaker }}" class="{{ speaker }} headshot" />
-      {% endif %}
-      {% if bio %}
-        <p class="speaker-bio">{{ bio }}</p>
+        <img src="{{ headshot }}" alt="{{ speaker }} headshot" class="headshot-small" />
       {% endif %}
     </div>
-    {# {% if headshot %}<img src="{{ headshot }}" alt="{{ speaker }}" />{% endif %}
-    {% if bio %}<p>{{ bio }}</p>{% endif %} #}
+
+
     <div class="talk-abstract">
       <h3>Abstract</h3>
       {{ content | safe }}
     </div>
-    {% if slides %}<p><a href="/talks/slides/{{ slides }}">Slides</a></p>{% endif %}
-    <p><a href="/">Back to home</a></p>
+
+    <p><a href="/talks">View all talks</a></p>
   </div>
 </body>
 </html>

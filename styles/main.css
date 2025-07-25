@@ -133,13 +133,8 @@ span.small {
   color: #585858;
 }
 
-.container img {
-  max-width: 50%;
-}
-
 .talk-abstract p {
   text-align: left;
-  /* font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif */
 }
 
 .speaker-info {
@@ -152,9 +147,8 @@ span.small {
 .speaker-headshot {
   max-width: 150px;
   height: auto;
-  border-radius: 4px;
+  clip-path: circle();
   flex-shrink: 0; /* prevents the image from shrinking */
-  max-width: 40%;
 }
 
 .speaker-bio {
@@ -169,4 +163,61 @@ span.small {
     align-items: center;
     text-align: center;
   }
+}
+
+.talk-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.slides-link {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.slides-link a {
+  color: #0070f3;
+  text-decoration: none;
+}
+
+.slides-link a:hover {
+  text-decoration: underline;
+}
+
+.speaker-condensed {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
+.headshot-small {
+  width: 100px;
+  border-radius: 6px;
+  flex-shrink: 0;
+}
+
+.speaker-text {
+  flex: 1;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+.affiliation {
+  color: #666;
+  font-style: italic;
+}
+
+.bio-condensed {
+  margin-top: 0.5rem;
+  margin-bottom: 0;
+}
+
+.talks-table th:first-child,
+.talks-table td:first-child {
+  width: auto;
+  white-space: normal;
 }
