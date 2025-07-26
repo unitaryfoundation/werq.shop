@@ -2,6 +2,7 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("styles");
   eleventyConfig.addPassthroughCopy("image");
   eleventyConfig.addPassthroughCopy("talks/slides");
+  eleventyConfig.addPassthroughCopy("talks/headshots");
   eleventyConfig.addPassthroughCopy("static");
   eleventyConfig.addPassthroughCopy("CNAME");
 
