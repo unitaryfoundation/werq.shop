@@ -5,3 +5,12 @@ admin/*.md
 admin/*.csv
 
 .DS_Store
+
+*.aux
+*.bbl
+*.blg
+*.log
+*.out
+*.fls
+*.fdb_latexmk
+*.synctex.gz

@@ -1,0 +1,247 @@
+\documentclass{article}
+
+
+\usepackage{arxiv}
+\usepackage{xcolor}
+
+\usepackage[utf8]{inputenc} % allow utf-8 input
+\usepackage[T1]{fontenc}    % use 8-bit T1 fonts
+\usepackage{hyperref}       % hyperlinks
+\usepackage{url}            % simple URL typesetting
+\usepackage{booktabs}       % professional-quality tables
+\usepackage{amsfonts}       % blackboard math symbols
+\usepackage{nicefrac}       % compact symbols for 1/2, etc.
+\usepackage{microtype}      % microtypography
+\usepackage{natbib}
+\usepackage{csquotes}
+\usepackage{graphicx}
+\graphicspath{ {./images/} }
+
+
+\title{Report on the 2025 Workshop on Error Resilience in Quantum computing (WERQSHOP)}
+
+
+\author{
+ Nate Stemen \\
+  Unitary Foundation\\
+  \texttt{nate@unitary.foundation}\\
+   \And
+ Pranav Gokhale \\
+   Infleqtion\\
+   \texttt{pranav.gokhale@infleqtion.com}\\  
+\And Ryan LaRose \\
+  Michigan State University\\
+  \texttt{rmlarose@msu.edu}\\
+  \And
+ Andrea Mari \\
+   University of Camerino\\
+   \texttt{andrea.mari@unicam.it}\\
+   \And
+ Peter P. Orth \\
+  Saarland University\\
+  \texttt{peter.orth@uni-saarland.de}\\
+  \And
+  \And
+ Gregory Quiroz \\
+  Johns Hopkins University \\
+  \texttt{gregory.quiroz@jhuapl.edu} \\
+  \And
+ Misty Wahl\\
+  Independent\\
+  \texttt{misty.wahl@gmail.com}\\
+  \And
+ Will Zeng\\
+  Unitary Foundation\\
+  \texttt{will@unitary.foundation}
+     \And
+ Nathan Shammah \\
+  Unitary Foundation\\
+  \texttt{nathan@unitary.foundation}\\
+ %     \And
+ % Sam Ferracin \\
+ %  IBM \\
+ %  \texttt{sam.ferracin@ibm.com} \\
+}
+
+\begin{document}
+\maketitle
+\begin{abstract}
+The 2025 Workshop on Error Resilience in Quantum computing (WERQSHOP) brought together 60 researchers, software developers, and practitioners across the field of quantum computing to critically assess the role of quantum error mitigation (QEM) as quantum devices enter the early fault-tolerant era.
+With presentations spanning limitations, experimental breakthroughs, and emerging QEM-QEC hybrid strategies, the event highlighted the lack of general-purpose solutions, the promise of tailored mitigation techniques, and the growing importance of open infrastructure to support research.
+This report synthesizes key insights, challenges, and forward-looking recommendations from two days of talks, panels, and discussions.
+\end{abstract}
+
+
+% keywords can be removed
+\keywords{quantum computing \and error mitigation \and error correction \and conference}
+
+
+\section{Motivation}\label{sec:motivation}
+
+Quantum Error Mitigation (QEM) drew the attention of the quantum computing scientific community  around 2017, when relatively simple techniques were introduced \cite{ZNEintro,ZNEPECintro} and shortly after demonstrated experimentally.
+Despite the fact that many protocols put forth over the past 8 years have been designed predominantly with Noisy Intermediate Scale Quantum (NISQ) devices in mind, new devices have functionality beyond implementing static circuits with final measurements. E.g., by introducing mid-circuit measurements that are crucial for full-fledged quantum error correcting (QEC) schemes and early fault-tolerant quantum computing (eFTQC).
+With the progressive availability of these devices and functionalities to be rolled out in the very near future, we ask the question:
+
+\begin{displayquote}
+\emph{What role do QEM techniques play on NISQ devices and beyond in eFTQC?}
+\end{displayquote}
+
+Indeed, while much progress has been made in implementing error-correcting codes, current devices are limited by qubit number, fidelities, non-trivial noise mechanisms, and it is becoming clear that the employment of QEM techniques in practice can help to improve QEC experiments.
+For this reason, Unitary Foundation, with support from NSF and DoE grants put on WERQSHOP: the Workshop on Error Resilience in Quantum computing (\url{https://werq.shop}.
+The event was held 17--18 July 2025 at New York University in New York City and comprised invited, contributed, and lightning talks, as well as multiple discussion sessions.
+
+\section{Themes}\label{sec:themes}
+In this section we provide an overview of key themes that are central to current QEM scientific exploration and development and report the main findings from the event.
+
+\subsection*{Theme 1: Known limitations and theory gaps}\label{sec:early}
+
+Despite nearly a decade of development in quantum error mitigation, the field remains in a formative phase.
+General-purpose QEM techniques like zero-noise extrapolation (ZNE) and probabilistic error cancellation (PEC) have become foundational, yet very few practical guidelines like those described in~\cite{wang2023} exist for when or how to apply these techniques to specific devices, algorithms, or noise regimes.
+At WERQSHOP, this theme emerged repeatedly: much of the current QEM landscape remains empirical, heuristic, and problem-specific.
+
+Yihui Quek's talk, \emph{Noise vs. Quantum Algorithms}, provided a theoretical framing (building on work in~\cite{Quek2024, quek2024-2}) for how noise impacts mitigability.
+By studying quantum circuits impacted by both depolarizing and non-unital noise, Quek demonstrated rigorous worst-case bounds showing that error mitigation is fundamentally limited in scalability: for certain classes of circuits, the number of circuit executions needed to extract meaningful expectation values grows exponentially in the number of qubits and circuit depth.
+These results are rooted in entropy accumulation and scrambling arguments and provide strong evidence that mitigation is not a drop-in replacement for fault tolerance \textbf{at scale}.
+
+Importantly, the talk also noted that much of this theoretical landscape is still undeveloped, particularly for non-unital noise models such as amplitude damping.
+More complex noise models are more relevant to realistic quantum devices but significantly harder to analyze.
+
+\paragraph{Open problems}
+
+\begin{itemize}
+    \item \textbf{Theory-practice gap.} While rigorous worst-case bounds exist for QEM limitations under certain noise models, it is not well understood how these bounds relate to the average-case circuits or real-world hardware noise.
+    
+    \item \textbf{Understudied noise types.} Many theoretical QEM studies assume depolarizing or symmetric noise models. However, non-unital and more realistic noise processes (e.g., amplitude damping, leakage, correlated noise) are common in practice but under-theorized.
+    
+    \item \textbf{Benchmarking.} There are no standardized or consensus benchmarks for comparing QEM techniques across hardware or application domains. This limits progress in understanding general principles.
+\end{itemize}
+
+\paragraph{Takeaways}
+
+\begin{itemize}
+    \item Theoretical limitations are real, but often describe worst-case regimes. Understanding when and how QEM works in practice remains an urgent challenge.
+    
+    \item More analytical and numerical study is needed on non-unital and hardware-relevant noise processes.
+    
+    \item A concerted effort toward reproducible benchmarks—both theoretical and experimental—would accelerate shared understanding of the field’s current capabilities and limitations.
+\end{itemize}
+
+
+\subsection*{Theme 2: QEM Heuristics}
+
+As discussed above, prescriptive knowledge for applying error mitigation does not generally exist.
+Instead, many experimental groups have adopted a pragmatic, heuristic-driven approach: combining multiple mitigation, suppression, and detection strategies tailored to specific hardware and workloads.
+Rather than seeking universal best practices, researchers are increasingly designing QEM stacks that match the noise characteristics of the device, the structure of the algorithm, and the precision needs of the application.
+While this makes systematic evaluation difficult, it reflects \textbf{a broader shift from theoretical generality to practical effectiveness}.
+
+A variety of case studies illustrated how these heuristics play out in practice.
+Eli Chertkov (Quantinuum) demonstrated that a combination of dynamical decoupling, randomized compiling, zero-noise extrapolation (ZNE), and leakage detection enabled classically intractable quantum simulations of magnetism \cite{chertkov2025}.
+Jin Ming Koh (Harvard) highlighted mitigation strategies used in real experiments on superconducting hardware, illustrating the value of tailoring QEM to specific device behaviors.
+Sam Ferracin (IBM) emphasized the role of performant QEM software in making heuristics usable at scale, describing engineering advances that reduced runtime for error mitigation by orders of magnitude --- making such methods viable even for those with limited computational resources, and enabling experiments on par with~\cite{IBM-utility}.
+Zhiyao Li (University of Washington) presented field-theory simulations where customized mitigation strategies were key to reaching the desired precision. 
+Matea Leahy (Algorithmiq) described a tensor network-based error mitigation method with favorable scaling~\cite{filippov2023scalabletensornetworkerrormitigation}, showing that practical techniques can saturate the minimal sampling requirements predicted by theory as well as how it performed in simulating many-body dynamics~\cite{leahy2024}.
+
+These examples collectively underscored a trend: the most effective QEM in current use is multi-layered, highly adapted to the problem and hardware, and measured by its ability to achieve specific application goals --- whether that is extending simulation depth, enabling a benchmark, or meeting a target precision --- rather than abstract metrics alone.
+
+\paragraph{Open problems}
+\begin{itemize}
+    \item How can we effectively and transparently benchmark heuristic, problem- and hardware-specific strategies?
+    \item Is there a unifying theoretical framework that, given a sufficiently descriptive noise model and structural characteristics of the circuit of interest, can indicate a beneficial combination of error mitigation techniques to apply? In lieu of a theoretical framework, could such a generalized error mitigation strategy be generated via a learning-based approach?
+    \item How should we evaluate the cost-benefit tradeoffs of QEM strategies in real-world workflows (e.g., precision vs runtime vs calibration overhead)?
+    \item What software or interfaces are needed to make QEM strategies composable, tunable, and broadly usable by non-experts?
+    \item Can lessons from QEM experiments be codified into educational resources and design patterns for broader adoption?
+\end{itemize}
+
+\paragraph{Takeaways}
+\begin{itemize}
+    \item In practice, the most effective QEM strategies are multi-layered and customized. There is no one-size-fits-all solution.
+    \item Experimental groups are consistently using multiple mitigation techniques in tandem.
+    \item Scalable software infrastructure and tooling is essential: many effective heuristics are too expensive or brittle to use without automation.
+    \item As the field matures, documenting what worked in real-world studies may be more valuable than proposing overly generalized protocols.
+\end{itemize}
+
+\subsection*{Theme 3: Integrating QEM and QEC}
+
+Perhaps the most widely discussed topic at WERQSHOP was how quantum error mitigation (QEM) and quantum error correction (QEC) might coexist or be integrated.
+With early fault-tolerant devices on the horizon, new experiments are beginning to move beyond purely NISQ settings, yet still fall short of large-scale QEC capabilities.
+In this ``pre-threshold'' regime, where logical qubits may exist but overheads remain prohibitive, participants explored hybrid strategies such as applying QEM on logical qubits, using error detection in lieu of full correction, or designing mitigation protocols inspired by QEC concepts.
+
+Zhenyu Cai (Oxford) described two frameworks for QEM–QEC integration, including ``virtual QEC,''~\cite{cai2024} which uses an entangled pair of logical and unencoded circuits to enable error correction on the unencoded circuit, and an error-mitigated technique for sampling problems~\cite{cai2025}.
+Raam Uzdin (HUJI) demonstrated drift-resilient mitigation for dynamic circuits \cite{santos2025driftresilientmidcircuitmeasurementerror}, introducing parity-based mitigation methods applicable even to mid-circuit measurement and reset operations, and emphasizing compatibility with QEC components.
+Yongshan Ding (Yale) highlighted the use of error mitigation directly on logical qubits, especially for architectures with error detection capabilities, positioning QEM as a complement to QEC in logical regimes \cite{zhou2025surfacecodeerrorcorrection}.
+Ethan Egger (MSU) proposed quantum error detection as a middle ground, discarding non-codeword states to improve output quality.
+William J. Huggins (Google) introduced the FLASQ cost model, designed to estimate resource requirements for early fault-tolerant quantum algorithms and to quantify the potential benefits of combining error mitigation and error correction~\cite{lacroix2025scaling}.
+
+The discussions underscored both theoretical and experimental progress in this space, as well as differing assumptions about the resources that near-term hardware will realistically provide—ranging from noise model access to ancilla qubits and mid-circuit measurement.
+This variety of approaches reflects a growing consensus that QEM and QEC need not be seen as mutually exclusive, and that well-designed hybrid methods could help bridge the gap between NISQ devices and fully fault-tolerant systems.
+
+\paragraph{Open problems}
+\begin{itemize}
+    \item How do we design mitigation protocols that are compatible with QEC pipelines, particularly in hardware with constrained measurement/reset capabilities?
+    \item What are the theoretical limits of error mitigation applied to logical qubits? Does mitigation help more or less once QEC is partially implemented?
+    \item What is the best way to combine error detection and QEM?
+    \item Can, and should, mitigation techniques be adapted to target failure modes that are especially problematic for QEC, such as leakage or correlated noise?
+\end{itemize}
+
+\paragraph{Takeaways}
+\begin{itemize}
+    \item QEM and QEC are not mutually exclusive. A growing body of work suggests they can be meaningfully combined, especially in near-term settings where devices operate around the QEC threshold.
+    \item Error detection and ``soft'' error correction (e.g., postselection, filtering, or partial decoding) are attractive for hardware where full correction is still out of reach.
+\end{itemize}
+
+\subsection*{Theme 4: Open-Source Software and Proprietary Integration}
+
+The topic of integrating open-source tools with closed- or mixed-source software stacks was discussed throughout the event.
+Hardware providers may face IP issues in opening up extensive information on device operation, as often requested by QEM researchers, and face the burden of maintaining such part of the stack if made public.
+An example is the exposure of pulse-level access to QPUs, rolled out and rolled back by different QC providers.
+Workshop participants emphasized the need for open-sourcing software tools related to QEM and related fields (compilation, noise characterization, control, QEC code design, benchmarking, etc.) in order to accelerate the creation of a software stack enabling researchers to address new tasks, faster. 
+
+\section{Workshop Format}
+
+WERQSHOP was designed as a small, focused gathering to encourage conversation, exchange, and cross-pollination between domains that from the outside may seem connected, but in reality often are not.
+Capped at 65 attendees, the two-day event featured a single-track format that allowed the entire group to stay together across sessions without fragmentation.
+
+The workshop consisted of a mix of invited talks, contributed talks, lightning talks, and structured discussion blocks.
+Sessions emphasized interactivity: the schedule had built-in time for questions, and speakers were invited to include open problems as part of their presentation to help others understand gaps in different parts of the ecosystem.
+
+In addition to Q\&A periods throughout the program, we held breakout sessions on the second day organized around topical clusters (compilation, QEM software, and integrating QEM \& QEC).
+Each session was assigned a lead who reported back to the entire group after discussion.
+
+This balance of talks and unstructured time fostered a collaborative atmosphere where participants could reflect, challenge assumptions, and share challenges with their peers.
+
+The full program can be found at \url{https://werq.shop}. Each talk can be found at \url{https://werq.shop/talks} with the slides publicly available, when made available by presenters. 
+
+\section{Community}
+
+WERQSHOP brought together a wide cross-section of the quantum computing community, spanning industry, academia, and open-source development. 
+Attendees included:
+
+\begin{itemize}
+  \item Early-career researchers presenting at their first workshop
+  \item Senior scientists with decades of experience in quantum information
+  \item Software engineers building error mitigation libraries
+  \item Hardware-focused teams applying QEM to real devices
+  \item Open-source contributors (including Mitiq contributors) for whom QEM tooling served as an entry point into the field
+  \item Quantum computing application scientists applying QEM to help customers understand the limits of current devices
+\end{itemize}
+
+The diversity of attendees was aimed not only at workforce development, but also at prompting speakers to address bigger-picture ideas and forward-looking directions.
+Demographically, the group represented a spectrum of backgrounds, affiliations, and career stages.
+Several attendees noted how rare it is to be in a room where both software maintainers and theoretical physicists are engaged in the same discussion, and that this convergence gave them new perspective on where their work fits in the broader landscape.
+
+We believe this diversity of expertise and perspective is essential to our field, and one of the workshop's greatest strengths.
+
+\section{Conclusion}
+
+WERQSHOP 2025 underscored both the promise and the limitations of quantum error mitigation as devices approach the early fault-tolerant regime.
+Across themes, a consistent picture emerged: QEM remains largely heuristic and problem-specific, with limited theoretical guidance, but it continues to deliver practical value in extending the reach of current hardware.
+At the same time, hybrid approaches that integrate QEM with QEC point toward a future where mitigation and correction are not competing paradigms but complementary tools.
+
+\section{Acknowledgements}
+This work was supported by the National Science Foundation (NSF) via a POSE Phase II grant, “Mitiq POSE”, under Award Number 2303643.
+
+This work was partially supported by the U.S. Department of Energy, Office of Science, Office of Advanced Scientific Computing Research, Accelerated Research in Quantum Computing under Award Number DE-SC0025336 and DE-SC0025493.
+
+\bibliographystyle{unsrt}  
+\bibliography{references}
+\end{document}
